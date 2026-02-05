@@ -160,11 +160,11 @@ After infra limits are removed, application logic becomes dominant.
 3. Model serialization caused corrupted state
 
 ### Fixes
-- Explicit store/restore instead of serialization
+- Explicit store/restore of tokens instead of Sanctum model serialization
 - Memcached removed
-- Redis split by responsibility
-- Separate Redis for async token updates
-- Sanctum extracted into `dayonyz/sanctum-bulwark`
+- Redis split into separate logical databases by cache responsibility
+- Separate Redis instance for asynchronous token updates
+- Sanctum caching extracted into a dedicated package `dayonyz/sanctum-bulwark`
 
 ### Final Result
 🔥 **2747 RPS**  
